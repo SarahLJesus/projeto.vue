@@ -54,7 +54,15 @@
     <button @click="incrementar">Incrementar</button>
     <button @click="decrementar">Decrementar</button>
     <button @click="reiniciar">Reiniciar</button>
+
+    <div
+      :style="{ backgroundColor: contador > 10 ? 'green' : 'red' }"
+    >
+      <p v-if="contador > 10">Seu valor está maior que 10</p>
+      <p v-else>Seu valor está menor ou igual que 10</p>
+    </div>
   </div>
+
 </template>
 
 <style scoped>
